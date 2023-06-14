@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class VirusController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float hiz;
+    public static bool isReturn = true;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isReturn)
+        {
+            transform.Rotate(0, 0, hiz * Time.deltaTime);
+        }
     }
 }
