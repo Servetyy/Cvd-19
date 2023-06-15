@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - "V\u0131rus"
+  - Vaccine
+  - levelVaccine
   layers:
   - Default
   - TransparentFX

@@ -10,20 +10,22 @@ public class SpawnManager : MonoBehaviour
     public Text vaccineText;
     public int vaccineAmount;
     float a;
-    void Start()
+    void Awake()
     {
-        vaccineText.text = "X " + vaccineAmount.ToString();
+        vaccineText.text = vaccineAmount.ToString();
     }
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && vaccineAmount > 0)
         {
             vaccineAmount--;
-            vaccineText.text = "X " + vaccineAmount.ToString();
+            vaccineText.text = vaccineAmount.ToString();
             spawnVaccine();
-            a = 0 + (255 / (vaccineAmount+1));
+            a = 0 + (255 / (vaccineAmount + 1));
             GameObject.Find("Výrus").GetComponent<SpriteRenderer>().color = new Color32(255, ((byte)a), ((byte)a), 255);
         }
+
+
     }
     void spawnVaccine()
     {
